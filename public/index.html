@@ -105,7 +105,7 @@
             });
 
             $.ajax({
-                url: 'https://api.spotify.com/v1/me/following/contains?type=artist&ids=06HL4z0CvFAxyc27GXpf02',
+                url: 'https://api.spotify.com/v1/me/following/contains?type=artist&ids=4eCiH9fUrQIkXarL5zLBve',
                 headers: {
                   'Authorization': 'Bearer ' + access_token
                 },
@@ -126,7 +126,7 @@
             $.ajax({
                 url: 'https://api.spotify.com/v1/me/following?type=artist',
                 type: 'PUT',
-                data: '{ids:["06HL4z0CvFAxyc27GXpf02"]}',
+                data: '{ids:["4eCiH9fUrQIkXarL5zLBve"]}',
                 headers: {
                   'Authorization': 'Bearer ' + access_token,
                   'Content-Type': 'application/json'
