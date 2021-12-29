@@ -13,14 +13,23 @@
         white-space: nowrap;
         width: 500px;
       }
+      .jumbotron-fluid {
+        padding-top: 20%;
+      }
+      html, 
+      body {
+        background-color: lightsteelblue;
+        height: 100%
+      }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div id="login">
-        <h1>Let's see if you follow S. Diddy!</h1>
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+    <div class="jumbotron-fluid text-center">
+      <div id="login" class="d-flex align-items-center justify-content-center">
+          <h1>Let's see if you follow S. Diddy!</h1>
+          <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+          <h4>(Don't worry, your spotify credentials are not stored anywhere during this process)</h4>
       </div>
       <div id="loggedin">
         <div id="user-profile">
@@ -36,7 +45,7 @@
     </div>
 
     <script id="user-profile-template" type="text/x-handlebars-template">
-      <h1>Hi there {{display_name}}!</h1>
+      <h4>Hi there {{display_name}}!</h4>
     </script>
 
     <script id="oauth-template" type="text/x-handlebars-template">
@@ -45,11 +54,10 @@
 
     <script id="diddy-template" type="text/x-handlebars-template">
       <h2>You following S. Diddy?</h2>
-      <dl class="dl-horizontal"></dl>
       {{#if this.[0]}}
-        <dd>Hell yeah you are!</dd>
+        <h1>Hell yeah you are!</h1>
       {{else}}
-        <dd>No you're not, WTF is wrong with you?</dd>
+        <h1>No you're not, WTF is wrong with you?</h1>
       {{/if}}
     </script>
 
